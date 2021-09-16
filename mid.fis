@@ -2,9 +2,9 @@
 Name='mid'
 Type='mamdani'
 Version=2.0
-NumInputs=7
-NumOutputs=5
-NumRules=15
+NumInputs=10
+NumOutputs=8
+NumRules=24
 AndMethod='min'
 OrMethod='max'
 ImpMethod='min'
@@ -15,17 +15,17 @@ DefuzzMethod='mom'
 Name='Security'
 Range=[0 5]
 NumMFs=3
-MF1='Low':'gaussmf',[1.061 0]
-MF2='Medium':'gaussmf',[1.061 2.5]
-MF3='High':'gaussmf',[1.061 5]
+MF1='Low':'gaussmf',[0.8495 3.47e-17]
+MF2='Medium':'gaussmf',[0.8495 2.5]
+MF3='High':'gaussmf',[0.8495 5]
 
 [Input2]
 Name='Networking'
 Range=[0 5]
 NumMFs=3
-MF1='Low':'gaussmf',[1.062 0]
-MF2='Medium':'gaussmf',[1.062 2.5]
-MF3='High':'gaussmf',[1.062 5]
+MF1='Low':'gaussmf',[0.8495 3.47e-17]
+MF2='Medium':'gaussmf',[0.8495 2.5]
+MF3='High':'gaussmf',[0.8495 5]
 
 [Input3]
 Name='Embedded_Systems'
@@ -33,7 +33,7 @@ Range=[0 5]
 NumMFs=3
 MF1='Low':'gaussmf',[0.8495 3.47e-17]
 MF2='Medium':'gaussmf',[0.8495 2.5]
-MF3='High':'gaussmf',[0.8495 5.014]
+MF3='High':'gaussmf',[0.8495 5]
 
 [Input4]
 Name='Low_Level_Programing'
@@ -67,59 +67,116 @@ MF1='Low':'gaussmf',[0.8495 3.47e-17]
 MF2='Medium':'gaussmf',[0.8495 2.5]
 MF3='High':'gaussmf',[0.8495 5]
 
+[Input8]
+Name='Image_Processing'
+Range=[0 5]
+NumMFs=3
+MF1='Low':'gaussmf',[0.8495 3.47e-17]
+MF2='Medium':'gaussmf',[0.8495 2.5]
+MF3='High':'gaussmf',[0.8495 5]
+
+[Input9]
+Name='Signal_Processing'
+Range=[0 5]
+NumMFs=3
+MF1='Low':'gaussmf',[0.8495 3.47e-17]
+MF2='Medium':'gaussmf',[0.8495 2.5]
+MF3='High':'gaussmf',[0.8495 5]
+
+[Input10]
+Name='Devops'
+Range=[0 5]
+NumMFs=3
+MF1='Low':'gaussmf',[0.8495 3.47e-17]
+MF2='Medium':'gaussmf',[0.8495 2.5]
+MF3='High':'gaussmf',[0.8495 5]
+
 [Output1]
 Name='Computer_Netwroking_and_Wireless_Communication'
 Range=[0 10]
 NumMFs=3
-MF1='Not_Recomended':'gaussmf',[2.122 0]
-MF2='Recomended':'gaussmf',[2.122 5]
-MF3='Highly_Recomended':'gaussmf',[2.122 10]
+MF1='Not_Recomended':'gaussmf',[1.699 6.939e-17]
+MF2='Recomended':'gaussmf',[1.699 5]
+MF3='Highly_Recomended':'gaussmf',[1.699 10]
 
 [Output2]
 Name='Security_Microkernels_for_Embedded_Systems'
 Range=[0 10]
 NumMFs=3
-MF1='Not_Recomended':'gaussmf',[2.123 0]
-MF2='Recomended':'gaussmf',[2.123 5]
-MF3='Highly_Recomended':'gaussmf',[2.123 10.01]
+MF1='Not_Recomended':'gaussmf',[1.699 6.939e-17]
+MF2='Recomended':'gaussmf',[1.699 5]
+MF3='Highly_Recomended':'gaussmf',[1.699 10]
 
 [Output3]
 Name='Architectural_Support_for_Reliability_and_Scalability'
 Range=[0 10]
 NumMFs=3
-MF1='Not_Recomended':'gaussmf',[2.123 0]
-MF2='Recomended':'gaussmf',[2.123 5]
-MF3='Highly_Recomended':'gaussmf',[2.123 10]
+MF1='Not_Recomended':'gaussmf',[1.699 6.939e-17]
+MF2='Recomended':'gaussmf',[1.699 5]
+MF3='Highly_Recomended':'gaussmf',[1.699 10]
 
 [Output4]
 Name='Machine_Learning_and_Big_Data'
 Range=[0 10]
 NumMFs=3
-MF1='Not_Recomended':'gaussmf',[2.123 0]
-MF2='Recomended':'gaussmf',[2.123 5]
-MF3='Highly_Recomended':'gaussmf',[2.123 10]
+MF1='Not_Recomended':'gaussmf',[1.699 6.939e-17]
+MF2='Recomended':'gaussmf',[1.699 5]
+MF3='Highly_Recomended':'gaussmf',[1.699 10]
 
 [Output5]
 Name='IoT'
 Range=[0 10]
 NumMFs=3
-MF1='Not_Recomended':'gaussmf',[2.123 0]
-MF2='Recomended':'gaussmf',[2.123 5]
-MF3='Highly_Recomended':'gaussmf',[2.123 10]
+MF1='Not_Recomended':'gaussmf',[1.699 6.939e-17]
+MF2='Recomended':'gaussmf',[1.699 5]
+MF3='Highly_Recomended':'gaussmf',[1.699 10]
+
+[Output6]
+Name='Heterogeneous_Pipelines_in_Embedded_Processors'
+Range=[0 10]
+NumMFs=3
+MF1='Not_Recomended':'gaussmf',[1.699 6.939e-17]
+MF2='Recomended':'gaussmf',[1.699 5]
+MF3='Highly_Recomended':'gaussmf',[1.699 10]
+
+[Output7]
+Name='Image_Processing'
+Range=[0 10]
+NumMFs=3
+MF1='Not_Recomended':'gaussmf',[1.699 6.939e-17]
+MF2='Recomended':'gaussmf',[1.699 5]
+MF3='Highly_Recomended':'gaussmf',[1.699 10]
+
+[Output8]
+Name='Cloud_computing'
+Range=[0 10]
+NumMFs=3
+MF1='Not_Recomended':'gaussmf',[1.699 6.939e-17]
+MF2='Recomended':'gaussmf',[1.699 5]
+MF3='Highly_Recomended':'gaussmf',[1.699 10]
 
 [Rules]
-1 1 0 0 0 0 0, 1 0 0 0 0 (1) : 1
-2 3 0 0 0 0 0, 2 0 0 0 0 (1) : 1
-3 3 0 0 0 0 0, 3 0 0 0 0 (1) : 1
-1 0 1 1 1 0 0, 0 1 0 0 0 (1) : 1
-2 0 3 3 2 0 0, 0 2 0 0 0 (1) : 1
-3 0 3 3 3 0 0, 0 3 0 0 0 (1) : 1
-1 0 0 1 1 0 0, 0 0 1 0 0 (1) : 1
-2 0 0 3 3 0 0, 0 0 2 0 0 (1) : 1
-3 0 0 3 3 0 0, 0 0 3 0 0 (1) : 1
-0 0 0 0 0 1 1, 0 0 0 1 0 (1) : 1
-0 0 0 0 0 3 2, 0 0 0 2 0 (1) : 1
-0 0 0 0 0 3 3, 0 0 0 3 0 (1) : 1
-1 1 1 0 0 0 0, 0 0 0 0 1 (1) : 1
-2 2 3 0 0 0 0, 0 0 0 0 2 (1) : 1
-3 3 3 0 0 0 0, 0 0 0 0 3 (1) : 1
+1 1 0 0 0 0 0 0 0 0, 1 0 0 0 0 0 0 0 (1) : 1
+2 3 0 0 0 0 0 0 0 0, 2 0 0 0 0 0 0 0 (1) : 1
+3 3 0 0 0 0 0 0 0 0, 3 0 0 0 0 0 0 0 (1) : 1
+1 0 1 1 1 0 0 0 0 0, 0 1 0 0 0 0 0 0 (1) : 1
+2 0 3 3 2 0 0 0 0 0, 0 2 0 0 0 0 0 0 (1) : 1
+3 0 3 3 3 0 0 0 0 0, 0 3 0 0 0 0 0 0 (1) : 1
+1 0 0 1 1 0 0 0 0 0, 0 0 1 0 0 0 0 0 (1) : 1
+2 0 0 3 3 0 0 0 0 0, 0 0 2 0 0 0 0 0 (1) : 1
+3 0 0 3 3 0 0 0 0 0, 0 0 3 0 0 0 0 0 (1) : 1
+0 0 0 0 0 1 1 0 0 0, 0 0 0 1 0 0 0 0 (1) : 1
+0 0 0 0 0 3 2 0 0 0, 0 0 0 2 0 0 0 0 (1) : 1
+0 0 0 0 0 3 3 0 0 0, 0 0 0 3 0 0 0 0 (1) : 1
+1 1 1 0 0 0 0 0 0 0, 0 0 0 0 1 0 0 0 (1) : 1
+2 2 3 0 0 0 0 0 0 0, 0 0 0 0 2 0 0 0 (1) : 1
+3 3 3 0 0 0 0 0 0 0, 0 0 0 0 3 0 0 0 (1) : 1
+0 0 1 1 1 0 0 0 0 0, 0 0 0 0 0 1 0 0 (1) : 1
+0 0 3 2 3 0 0 0 0 0, 0 0 0 0 0 2 0 0 (1) : 1
+0 0 3 3 3 0 0 0 0 0, 0 0 0 0 0 3 0 0 (1) : 1
+0 0 0 0 0 0 1 1 1 0, 0 0 0 0 0 0 1 0 (1) : 1
+0 0 0 0 0 0 3 3 2 0, 0 0 0 0 0 0 2 0 (1) : 1
+0 0 0 0 0 0 3 3 3 0, 0 0 0 0 0 0 3 0 (1) : 1
+1 1 0 0 0 0 0 0 0 1, 0 0 0 0 0 0 0 1 (1) : 1
+2 2 0 0 0 0 0 0 0 3, 0 0 0 0 0 0 0 2 (1) : 1
+3 3 0 0 0 0 0 0 0 3, 0 0 0 0 0 0 0 3 (1) : 1
