@@ -63,7 +63,7 @@ classdef recomendSystem < matlab.apps.AppBase
     methods (Access = private)
 
         % Button pushed function: Submit
-        function SubmitButtonPushed(app, ~)
+        function SubmitButtonPushed(app, event)
              
             
             fis = readfis('fuzzy_system');
@@ -96,7 +96,7 @@ classdef recomendSystem < matlab.apps.AppBase
                 available(end+1,1) = 8;
             end
             
-            topics = ["Computer Networking and Wireless Communication", "Secure microkernels for embedded systems", "Architectural support for Reliability and Security", "Machine Learning and Big Data", "IoT", "Heterogeneous Pipelines in Embedded Processors", "Image Processing", "Cloud Computing"];                  
+            topics = ['Computer Networking and Wireless Communication', 'Secure microkernels for embedded systems', 'Architectural support for Reliability and Security', 'Machine Learning and Big Data", "IoT", "Heterogeneous Pipelines in Embedded Processors", "Image Processing", "Cloud Computing"];                  
             
             interests(1) = app.SecuritySpinner.Value;
             interests(2) = app.NetworkingSpinner.Value;
