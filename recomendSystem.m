@@ -1,8 +1,9 @@
-classdef recomendSystem_2016_exported < matlab.apps.AppBase
+classdef recomendSystem < matlab.apps.AppBase
 
     % Properties that correspond to app components
     properties (Access = public)
         ResearchRecomenderUIFigure      matlab.ui.Figure
+        Submit                          matlab.ui.control.Button
         Precentages                     matlab.ui.control.TextArea
         Button_22                       matlab.ui.control.Button
         Button_21                       matlab.ui.control.Button
@@ -47,7 +48,6 @@ classdef recomendSystem_2016_exported < matlab.apps.AppBase
         NetworkingSpinnerLabel          matlab.ui.control.Label
         SecuritySpinner                 matlab.ui.control.Spinner
         SecuritySpinnerLabel            matlab.ui.control.Label
-        Button                          matlab.ui.control.Button
         IoT                             matlab.ui.control.CheckBox
         MLBD                            matlab.ui.control.CheckBox
         ASRS                            matlab.ui.control.CheckBox
@@ -62,9 +62,9 @@ classdef recomendSystem_2016_exported < matlab.apps.AppBase
     % Callbacks that handle component events
     methods (Access = private)
 
-        % Button pushed function: Button
-        function ButtonPushed(app, event)
-            
+        % Button pushed function: Submit
+        function SubmitButtonPushed(app, event)
+             
             
             fis = readfis('fuzzy_system');
             
@@ -207,15 +207,6 @@ classdef recomendSystem_2016_exported < matlab.apps.AppBase
             app.IoT.Text = '';
             app.IoT.Position = [556 588 25 22];
             app.IoT.Value = true;
-
-            % Create Button
-            app.Button = uibutton(app.ResearchRecomenderUIFigure, 'push');
-            app.Button.ButtonPushedFcn = createCallbackFcn(app, @ButtonPushed, true);
-            app.Button.Icon = 'submitButton.png';
-            app.Button.IconAlignment = 'center';
-            app.Button.BackgroundColor = [1 1 1];
-            app.Button.Position = [1052 309 193 50];
-            app.Button.Text = '';
 
             % Create SecuritySpinnerLabel
             app.SecuritySpinnerLabel = uilabel(app.ResearchRecomenderUIFigure);
@@ -530,6 +521,14 @@ classdef recomendSystem_2016_exported < matlab.apps.AppBase
             app.Precentages.BackgroundColor = [0.9412 0.9412 0.9412];
             app.Precentages.Position = [763 38 100 402];
 
+            % Create Submit
+            app.Submit = uibutton(app.ResearchRecomenderUIFigure, 'push');
+            app.Submit.ButtonPushedFcn = createCallbackFcn(app, @SubmitButtonPushed, true);
+            app.Submit.Icon = 'submitButton.png';
+            app.Submit.BackgroundColor = [1 1 1];
+            app.Submit.Position = [975 309 224 49];
+            app.Submit.Text = '';
+
             % Show the figure after all components are created
             app.ResearchRecomenderUIFigure.Visible = 'on';
         end
@@ -539,7 +538,7 @@ classdef recomendSystem_2016_exported < matlab.apps.AppBase
     methods (Access = public)
 
         % Construct app
-        function app = recomendSystem_2016_exported
+        function app = recomendSystem
 
             % Create UIFigure and components
             createComponents(app)
